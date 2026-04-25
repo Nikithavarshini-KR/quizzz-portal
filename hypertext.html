@@ -1,0 +1,505 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML mcq</title>
+<style>
+/* BODY */
+body{
+margin:0;
+padding:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg, #ff9966, #ff5e62);
+}
+
+/* MAIN QUIZ BOX */
+.container{
+width:50%;
+margin:130px auto;
+background:#fff;
+padding:25px;
+border-radius:30px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+box-sizing:border-box;
+position: relative;
+overflow:hidden;
+}
+/* Required star */
+.required {
+    color: red;
+}
+
+/* HEADINGS */
+h1{
+text-align:center;
+font-size:38px;
+margin:10px 0;
+word-break:break-word;
+line-height:1.2;
+}
+
+h2,h3{
+word-break:break-word;
+}
+
+/* INPUTS */
+input[type=text],
+input[type=email]{
+width:100%;
+padding:10px;
+margin:8px 0 15px;
+border:2px solid #ccc;
+border-radius:8px;
+box-sizing:border-box;
+font-size:16px;
+}
+input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #ff9966;
+}
+
+/* BUTTON */
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#ff9966;
+color:#fff;
+font-size:16px;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+background:#ff9966;
+}
+
+/* CERTIFICATE */
+#qq{
+display:none;
+width:100vw;
+height:100vh;
+background:#fdfdfd;
+border:12px solid gold;
+box-sizing:border-box;
+padding:20px;
+position:relative;
+text-align:center;
+overflow:hidden;
+}
+
+/* LOGO */
+#mm img{
+width:90px;
+margin-bottom:10px;
+}
+
+/* CERTIFICATE TEXT */
+#qq h1{
+font-size:38px;
+letter-spacing:2px;
+margin:10px 0;
+}
+
+#qq h2{
+font-size:28px;
+margin:12px 0;
+}
+
+#result{
+font-size:30px;
+font-weight:bold;
+color:green;
+margin:20px 0;
+}
+
+#qq p{
+font-size:22px;
+margin-top:20px;
+line-height:1.4;
+}
+
+/* SIGNATURE + DATE */
+.bottom{
+position:absolute;
+bottom:30px;
+left:30px;
+right:30px;
+display:flex;
+justify-content:space-between;
+align-items:flex-end;
+}
+
+.sign{
+text-align:left;
+font-size:28px;
+font-weight:bold;
+}
+
+.sign img{
+width:130px;
+display:block;
+margin-bottom:5px;
+}
+
+.date{
+font-size:28px;
+font-weight:bold;
+text-align:right;
+}
+
+/* PRINT */
+@page{
+size:landscape;
+margin:0;
+}
+
+@media print{
+body{
+background:white;
+}
+#qq{
+width:100%;
+height:100%;
+border:12px solid gold;
+}
+}
+
+/* MOBILE FIX */
+@media only screen and (max-width:768px){
+
+.container{
+width:78% !important;
+padding:15px !important;
+}
+
+h1{
+font-size:28px !important;
+}
+
+#qq{
+width:100vw !important;
+height:100vh !important;
+padding:12px !important;
+border:8px solid gold !important;
+}
+
+#qq h1{
+font-size:22px !important;
+letter-spacing:1px !important;
+}
+
+#qq h2{
+font-size:18px !important;
+}
+
+#result{
+font-size:22px !important;
+}
+
+#qq p{
+font-size:15px !important;
+}
+
+#mm img{
+width:65px !important;
+}
+
+.bottom{
+bottom:20px !important;
+left:15px !important;
+right:15px !important;
+display:flex !important;
+justify-content:space-between !important;
+align-items:flex-end !important;
+}
+
+.sign{
+font-size:18px !important;
+}
+
+.sign img{
+width:85px !important;
+}
+
+.date{
+font-size:18px !important;
+}
+
+}
+</style>
+</head>
+<script>
+    
+
+
+// Start Quiz
+function startQuiz() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let gender = document.querySelector('input[name="gender"]:checked');
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (name === "" || email === "" || !gender) {
+        alert("Please fill all details!");
+        return;
+    }
+    if(!email.match(emailPattern)) {
+    alert("Enter valid email!");
+    return;
+}
+document.getElementById("userSection").style.display = "none";
+    document.getElementById("quizSection").style.display = "block";
+    document.getElementById("displayName").innerText = name;
+    document.getElementById("vj").innerText = name;
+
+    
+}
+
+
+
+
+// CALCULATE SCORE
+function submitQuiz() {
+   
+
+
+    let score = 0;
+
+    if (document.getElementById("vj").checked) score++;
+    if (document.getElementById("nn").checked) score++;
+    if (document.getElementById("ll").checked) score++;
+    if (document.getElementById("pp").checked) score++;
+    if (document.getElementById("oo").checked) score++;
+    if (document.getElementById("dd").checked) score++;
+    if (document.getElementById("ff").checked) score++;
+    if (document.getElementById("ss").checked) score++;
+    if (document.getElementById("ww").checked) score++;
+    if (document.getElementById("jj").checked) score++;
+    if (document.getElementById("nn1").checked) score++;
+    if (document.getElementById("nn2").checked) score++;
+    if (document.getElementById("nn3").checked) score++;
+    if (document.getElementById("nn4").checked) score++;
+    if (document.getElementById("nn5").checked) score++;
+    if (document.getElementById("nn6").checked) score++;
+    if (document.getElementById("nn7").checked) score++;
+    if (document.getElementById("nn8").checked) score++;
+    if (document.getElementById("nn9").checked) score++;
+    if (document.getElementById("nn0").checked) score++;
+
+
+
+    // Show result on page
+    document.getElementById("result").innerHTML =
+        "  Score: " + score + " / 20";
+
+    // Disable all inputs after submit
+    let inputs = document.querySelectorAll("input");
+    inputs.forEach(input => input.disabled = true);
+document.getElementById("quizSection").style="display:none";
+document.getElementById("qq").style="display:block";
+document.getElementById("solai").style="display:none";
+document.body.style.background = "white";
+    document.getElementById("vjj").innerHTML = document.getElementById("displayName").innerHTML;
+document.getElementById("dz").innerHTML=new Date().toDateString();
+
+document.getElementById("qq").value;
+
+window.print();
+}
+
+</script>
+<body>
+<div class="container" id="solai">
+
+<!-- USER DETAILS -->
+
+<div id="userSection">
+    <h1>Quiz Registration</h1>
+
+    <label>Name <span class="required">*</span></label><br>
+    <input type="text" id="name" required><br>
+
+    <label>Email <span class="required">*</span></label><br>
+    <input type="email" id="email" required><br>
+
+        <label>Gender <span class="required">*</span></label><br><br>
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <br><br>
+
+    <button onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<!-- QUIZ SECTION -->
+<form id="quizSection"style="display:none">
+<h1>Welcome, <span id="displayName"></span> 👋</h1>
+<div id="timer" style="font-size:18px; font-weight:bold; color:red;"></div>
+<h3>1. What does HTML stand for? <span class="required">*</span></h3>
+<input type="radio" name="q1" id="vj">Hyper Text Markup Language<br><br>
+<input type="radio" name="q1">High Text Machine Language<br><br>
+<input type="radio" name="q1">Hyper Tool Markup Language<br><br>
+
+<h3>2. Which tag is used to create a paragraph? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q2" id="nn">&lt;p&gt;<br><br>
+<input type="radio" name="q2">&lt;para&gt;<br><br>
+<input type="radio" name="q2">&lt;text&gt;<br><br>
+
+<h3>3. Which tag is used for largest heading? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q3" id="ll">&lt;h1&gt;<br><br>
+<input type="radio" name="q3">&lt;h6&gt;<br><br>
+<input type="radio" name="q3">&lt;head&gt;<br><br>
+
+<h3>4. Which tag is used to insert image? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q4">&lt;picture&gt;<br><br>
+<input type="radio" name="q4" id="pp">&lt;img&gt;<br><br>
+<input type="radio" name="q4">&lt;src&gt;<br><br>
+
+<h3>5. Which tag is used to create link? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q5">&lt;link&gt;<br><br>
+<input type="radio" name="q5" id="oo">&lt;a&gt;<br><br>
+<input type="radio" name="q5">&lt;href&gt;<br><br>
+
+<h3>6. Which attribute is used in anchor tag for URL? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q6" id="dd">href<br><br>
+<input type="radio" name="q6">src<br><br>
+<input type="radio" name="q6">link<br><br>
+
+<h3>7. Which tag creates line break? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q7">&lt;break&gt;<br><br>
+<input type="radio" name="q7" id="ff">&lt;br&gt;<br><br>
+<input type="radio" name="q7">&lt;lb&gt;<br><br>
+
+<h3>8. Which tag creates horizontal line? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q8" id="ss">&lt;hr&gt;<br><br>
+<input type="radio" name="q8">&lt;line&gt;<br><br>
+<input type="radio" name="q8">&lt;hl&gt;<br><br>
+
+<h3>9. Which tag is used to create table? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q9">&lt;tb&gt;<br><br>
+<input type="radio" name="q9" id="ww">&lt;table&gt;<br><br>
+<input type="radio" name="q9">&lt;tr&gt;<br><br>
+
+<h3>10. Which tag is used for table row? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q10">&lt;td&gt;<br><br>
+<input type="radio" name="q10">&lt;th&gt;<br><br>
+<input type="radio" name="q10" id="jj">&lt;tr&gt;<br><br>
+
+<h3>11. Which tag is used for table data? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q11" id="nn1">&lt;td&gt;<br><br>
+<input type="radio" name="q11">&lt;tr&gt;<br><br>
+<input type="radio" name="q11">&lt;data&gt;<br><br>
+
+<h3>12. Which tag is used for unordered list? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q12">&lt;ol&gt;<br><br>
+<input type="radio" name="q12" id="nn2">&lt;ul&gt;<br><br>
+<input type="radio" name="q12">&lt;li&gt;<br><br>
+
+<h3>13. Which tag is used for ordered list? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q13" id="nn3">&lt;ol&gt;<br><br>
+<input type="radio" name="q13">&lt;ul&gt;<br><br>
+<input type="radio" name="q13">&lt;li&gt;<br><br>
+
+<h3>14. Which tag is used for list item? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q14" id="nn4">&lt;li&gt;<br><br>
+<input type="radio" name="q14">&lt;ul&gt;<br><br>
+<input type="radio" name="q14">&lt;item&gt;<br><br>
+
+<h3>15. Which tag is used for form? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q15">&lt;input&gt;<br><br>
+<input type="radio" name="q15">&lt;button&gt;<br><br>
+<input type="radio" name="q15" id="nn5">&lt;form&gt;<br><br>
+
+<h3>16. Which input type is used for email? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q16">text<br><br>
+<input type="radio" name="q16" id="nn6">email<br><br>
+<input type="radio" name="q16">mailbox<br><br>
+
+<h3>17. Which tag is used to create button? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q17" id="nn7">&lt;button&gt;<br><br>
+<input type="radio" name="q17">&lt;btn&gt;<br><br>
+<input type="radio" name="q17">&lt;click&gt;<br><br>
+
+<h3>18. Which tag contains page title? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q18">body<br><br>
+<input type="radio" name="q18">head<br><br>
+<input type="radio" name="q18" id="nn8">&lt;title&gt;<br><br>
+
+<h3>19. Which tag contains visible webpage content? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q19">head<br><br>
+<input type="radio" name="q19" id="nn9">&lt;body&gt;<br><br>
+<input type="radio" name="q19">html<br><br>
+
+<h3>20. Which tag is root tag of HTML document? 
+<span class="required">*</span>
+</h3>
+<input type="radio" name="q20" id="nn0">&lt;html&gt;<br><br>
+<input type="radio" name="q20">&lt;head&gt;<br><br>
+<input type="radio" name="q20">&lt;main&gt;<br><br>
+
+
+
+<button type="button" onclick="submitQuiz()">Submit</button>
+</div>
+<div id="qq" style="display:none;">
+<center>
+
+<div id="mm">
+<img src="cer.gif" 
+</div>
+<h1>CERTIFICATE OF PARTICIPATION</h1><br>
+<h2>This is proudly Awarded To</h2><br>
+<h2 id="vjj"></h2>
+<div id="result" style="margin-top:20px; font-size:20px; font-weight:bold;"></div>
+<p>For your enthusiastic participation in the online Quiz<br>
+&nbsp;&nbsp;&nbsp;Competition on the topic of the HTML</p>
+<div class="bottom">
+<div class = "sign">
+<img src="sign.png">
+<div>Signature</div>
+</div>    
+    
+
+    <div class="date">
+        <span id="dz"></span>
+    </div>
+</div>
+</center>
+</div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Portal</title>
+
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#fdfbfb,#d7f0ff);
+}
+
+.container{
+width:90%;
+max-width:380px;
+padding:25px;
+background:white;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+text-align:center;
+}
+
+h1{
+margin-bottom:25px;
+color:#333;
+font-size:28px;
+}
+
+.main{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.card{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px;
+border-radius:15px;
+color:white;
+cursor:pointer;
+transition:0.3s;
+font-size:18px;
+font-weight:bold;
+}
+
+.card:hover{
+transform:scale(1.03);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:45px;
+height:45px;
+}
+
+.html{
+background:linear-gradient(to right,#ff512f,#dd2476);
+}
+
+.css{
+background:linear-gradient(to right,#2193b0,#6dd5ed);
+}
+
+.js{
+background:linear-gradient(to right,#f7971e,#ffd200);
+}
+
+p{
+margin-top:20px;
+color:gray;
+font-size:14px;
+}
+@media(max-width:480px;){
+h1{
+font-size:24px;
+}
+.card{
+font-size:16px;
+padding:12px;
+}
+.card img{
+width:40px;
+height:40px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Quiz Section</h1>
+
+<div class="main">
+
+<div class="card html" onclick="html()">
+<img src="ht.png">
+<span>HTML Quiz</span>
+</div>
+
+<div class="card css" onclick="css()">
+<img src="css.gif">
+<span>CSS Quiz</span>
+</div>
+
+<div class="card js" onclick="js()">
+<img src="js.gif">
+<span>JavaScript Quiz</span>
+</div>
+
+</div>
+
+<p>Select any subject to start quiz</p>
+
+</div>
+
+<script>
+function html(){
+window.location.href="hypertext.html";
+}
+
+function css(){
+window.location.href="css.html";
+}
+
+function js(){
+window.location.href="java.html";
+}
+</script>
+
+</body>
+</html>
+
